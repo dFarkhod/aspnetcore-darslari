@@ -1,0 +1,23 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <h3>@ViewBag.title</h3>
+
+    @{ 
+        var staff = ViewData["staff"] as StaffManagement.Models.Staff;
+        if (staff == null)
+            return;
+    }
+    <div>
+        Name: @staff.FirstName @staff.LastName
+    </div>
+    <div>
+        Email: @staff.Email
+    </div>
+    <div>
+        Department: @staff.Department
+    </div>
+</body>
+</html>
