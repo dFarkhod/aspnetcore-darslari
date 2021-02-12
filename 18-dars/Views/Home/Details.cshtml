@@ -1,0 +1,20 @@
+﻿@model StaffManagement.ViewModels.HomeDetailsViewModel
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <h3>@Model.Title</h3>
+
+    <div>
+        Name: @Model.Staff.FirstName @Model.Staff.LastName
+    </div>
+    <div>
+        Email: @Model.Staff.Email
+    </div>
+    <div>
+        Department: @Model.Staff.Department
+    </div>
+</body>
+</html>
