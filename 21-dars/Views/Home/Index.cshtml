@@ -1,0 +1,27 @@
+﻿@model HomeIndexViewModel
+
+@{
+    ViewBag.Title = "Staff List";
+}
+
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Department</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var staff in Model.Staffs)
+        {
+            <tr>
+                <td>@staff.Id</td>
+                <td>@staff.FirstName @staff.LastName</td>
+                <td>@staff.Department</td>
+            </tr>
+        }
+    </tbody>
+
+</table>
+
