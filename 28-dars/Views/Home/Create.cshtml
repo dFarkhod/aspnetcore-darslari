@@ -1,0 +1,37 @@
+﻿@model Staff
+
+@{
+    ViewBag.Title = "Create Staff";
+}
+
+<form asp-controller="home" asp-action="create" method="post" class="mt-3">
+    <div class="form-group row">
+        <label asp-for="FirstName" class="col-sm-2 col-form-label" >First Name</label>
+        <div class="col-sm-10">
+            <input asp-for="FirstName" placeholder="First Name"/>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label asp-for="LastName" class="col-sm-2 col-form-label">Last Name</label>
+        <div class="col-sm-10">
+            <input asp-for="LastName" placeholder="Last Name" />
+        </div>
+    </div>
+    <div class="form-group row">
+        <label asp-for="Email" class="col-sm-2 col-form-label">Email</label>
+        <div class="col-sm-10">
+            <input asp-for="Email" placeholder="Email" />
+        </div>
+    </div>
+    <div class="form-group row">
+        <label asp-for="Department" class="col-sm-2 col-form-label">Department</label>
+        <div class="col-sm-10">
+            <select asp-for="Department" asp-items="Html.GetEnumSelectList<Department>()"></select>
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-sm-10">
+            <button type="submit" class="btn btn-primary">Create</button>
+        </div>
+    </div>
+</form>
