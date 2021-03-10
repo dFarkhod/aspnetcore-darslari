@@ -30,7 +30,7 @@ namespace StaffManagement.Controllers
         {
             HomeDetailsViewModel viewModel = new HomeDetailsViewModel()
             {
-                Staff = _staffRepository.Get(id??1),
+                Staff = _staffRepository.Get(id ?? 1),
                 Title = "Staff Details"
             };
 
@@ -41,6 +41,13 @@ namespace StaffManagement.Controllers
         public ViewResult Create()
         {
             return View();
+        }
+
+        [HttpPost]
+        public IActionResult Create(Staff staff)
+        {
+           Staff newStaff = _staffRepository.Create(staff);
+            return RedirectToAction("details", new { id = newStaff.Id});
         }
 
     }

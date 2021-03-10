@@ -18,6 +18,14 @@ namespace StaffManagement.Models
                 new Staff() {Id = 3, FirstName = "Usmon", LastName = "G'oziy", Email = "usmon@virtualdars.com", Department=Department.RnD}
             };
         }
+
+        public Staff Create(Staff staff)
+        {
+            staff.Id = _staffs.Max(s => s.Id) + 1;
+            _staffs.Add(staff);
+            return staff;
+        }
+
         public Staff Get(int id)
         {
             return _staffs.FirstOrDefault(staff => staff.Id.Equals(id));
