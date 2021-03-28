@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StaffManagement", "StaffManagement.csproj", "{989708E9-75CD-4984-A1C1-359A4254D352}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StaffManagement.DataAccess", "..\StaffManagement.DataAccess\StaffManagement.DataAccess.csproj", "{FF6D8A0F-0C7E-4BDC-9560-E3FA197478F2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StaffManagement.DataAccess", "..\StaffManagement.DataAccess\StaffManagement.DataAccess.csproj", "{FF6D8A0F-0C7E-4BDC-9560-E3FA197478F2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
