@@ -1,0 +1,35 @@
+﻿@model HomeDetailsViewModel
+
+@{
+    ViewBag.Title = "Staff Details";
+    var photoFilePath = "~/images/" + (Model.Staff.PhotoFilePath ?? "user.png");
+}
+
+<div class="row justify-content-center m-3">
+    <div class="col-sm-8">
+        <div class="card">
+            <div class="card-header">
+                <h1>@Model.Staff.FirstName @Model.Staff.LastName</h1>
+            </div>
+
+            <div class="card-body text-center">
+                <img class="card-img-top" src="@photoFilePath" asp-append-version="true"/>
+
+                <h4>Staff ID : @Model.Staff.Id</h4>
+                <h4>Email : @Model.Staff.Email</h4>
+                <h4>Department : @Model.Staff.Department</h4>
+
+            </div>
+            <div class="card-footer text-center">
+                <a asp-controller="home" asp-action="index" class="btn btn-primary">Back</a>
+                <a href="#" class="btn btn-primary">Edit</a>
+                <a href="#" class="btn btn-danger">Delete</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts
+{
+    <script src="~/scripts/script1.js"></script>
+}
